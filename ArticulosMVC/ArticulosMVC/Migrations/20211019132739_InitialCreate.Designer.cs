@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ArticulosMVC.Migrations
 {
     [DbContext(typeof(ArticuloContext))]
-    [Migration("20211018213800_InitialCreate")]
+    [Migration("20211019132739_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -49,10 +49,7 @@ namespace ArticulosMVC.Migrations
                         .HasColumnType("bigint")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("CategoriaId")
-                        .HasColumnType("int");
-
-                    b.Property<long?>("CategoriaId1")
+                    b.Property<long>("CategoriaId")
                         .HasColumnType("bigint");
 
                     b.Property<string>("Codigo")
@@ -81,7 +78,7 @@ namespace ArticulosMVC.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CategoriaId1");
+                    b.HasIndex("CategoriaId");
 
                     b.ToTable("Productos");
                 });
@@ -90,7 +87,9 @@ namespace ArticulosMVC.Migrations
                 {
                     b.HasOne("ArticulosMVC.Models.Categoria", "Categoria")
                         .WithMany("Productos")
-                        .HasForeignKey("CategoriaId1");
+                        .HasForeignKey("CategoriaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Categoria");
                 });

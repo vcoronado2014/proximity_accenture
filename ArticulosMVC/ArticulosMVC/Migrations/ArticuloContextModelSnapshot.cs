@@ -47,10 +47,7 @@ namespace ArticulosMVC.Migrations
                         .HasColumnType("bigint")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("CategoriaId")
-                        .HasColumnType("int");
-
-                    b.Property<long?>("CategoriaId1")
+                    b.Property<long>("CategoriaId")
                         .HasColumnType("bigint");
 
                     b.Property<string>("Codigo")
@@ -79,7 +76,7 @@ namespace ArticulosMVC.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CategoriaId1");
+                    b.HasIndex("CategoriaId");
 
                     b.ToTable("Productos");
                 });
@@ -88,7 +85,9 @@ namespace ArticulosMVC.Migrations
                 {
                     b.HasOne("ArticulosMVC.Models.Categoria", "Categoria")
                         .WithMany("Productos")
-                        .HasForeignKey("CategoriaId1");
+                        .HasForeignKey("CategoriaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Categoria");
                 });

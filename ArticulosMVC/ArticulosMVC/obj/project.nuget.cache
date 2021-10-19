@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fOMnDVSNOiRFwz8TZ9iwLCADzd+VEHNPYSusZjOHG1kfZY66txtbvrwzW5QNNR1ky9RjkcW2un/6XuSnRIk98g==",
+  "dgSpecHash": "yNT449KyEHlAkf8yHHm1Erg41PldO53Jc4f1SsEJnhEP2uWGOi8EUYMg5OA7ZIG83VEAL0KNDnYO7TaCe0dt7w==",
   "success": true,
-  "projectFilePath": "C:\\Disco F\\CURSOS_MINDHUB\\PROXIMITY_ACCENTURE\\proximity_accenture\\ArticulosMVC\\ArticulosMVC\\ArticulosMVC.csproj",
+  "projectFilePath": "C:\\Disco F\\CURSOS_MINDHUB\\PROXIMITY_ACCENTURE\\proximity_accenture_act4\\ArticulosMVC\\ArticulosMVC\\ArticulosMVC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vcoro\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\vcoro\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
