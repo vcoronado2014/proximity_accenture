@@ -8,6 +8,7 @@ using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace ArticulosMVC
@@ -26,6 +27,7 @@ namespace ArticulosMVC
         {
             services.AddControllersWithViews();
             services.AddDbContext<ArticuloContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("ArticuloDataBase")));
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

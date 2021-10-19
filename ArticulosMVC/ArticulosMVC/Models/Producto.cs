@@ -16,7 +16,7 @@ namespace ArticulosMVC.Models
         public int PrecioUnitario { get; set; }
         public int Stock { get; set; }
         public int Eliminado { get; set; }
-        public int CategoriaId { get; set; }
+        public long CategoriaId { get; set; }
         public Categoria Categoria { get; set; }
     }
 }
